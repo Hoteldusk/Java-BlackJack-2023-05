@@ -39,17 +39,13 @@ public class Deck {
 		drawCardRankSet(card);
 		drawCardSuitSet(card);
 		cards.remove(0);
-		// card 이미지 배열 저장해줘야함
 		return card;
 	}
 
 	private Card drawCardRankSet(Card card) {
 		CardImageService cardService = new CardImageService();
 		List<CardImage> cardImageList = cardService.getCardImageList();
-		// if ace, else if jack, else if queen, else if king else
-		if (card.getRank().equals("에이스")) {
-			card.setCardImage(cardImageList.get(0).getCardImage());
-		} else if (card.getRank().equals("잭")) {
+		if (card.getRank().equals("잭")) {
 			card.setCardImage(cardImageList.get(10).getCardImage());
 		} else if (card.getRank().equals("퀸")) {
 			card.setCardImage(cardImageList.get(11).getCardImage());
@@ -65,24 +61,24 @@ public class Deck {
 	private Card drawCardSuitSet(Card card) {
 		String[] standardImges = card.getCardImage();
 		String[] changeImges = new String[standardImges.length];
-		
+
 		for (int i = 0; i < standardImges.length; i++) {
-			
+
 			String standardImg = standardImges[i];
-			
-			if(card.getSuit().equals("클럽")) {
+
+			if (card.getSuit().equals("클럽")) {
 				changeImges[i] = standardImg.replace("&", "♣");
-			} else if(card.getSuit().equals("스페이드")) {
+			} else if (card.getSuit().equals("스페이드")) {
 				changeImges[i] = standardImg.replace("&", "♠");
-			} else if(card.getSuit().equals("하트")) {
+			} else if (card.getSuit().equals("하트")) {
 				changeImges[i] = standardImg.replace("&", "♥");
 			} else {
 				changeImges[i] = standardImg.replace("&", "◈");
 			}
 		}
-		
+
 		card.setCardImage(changeImges);
-		
+
 		return card;
 	}
 	// card suit method (if 4번 string 문자하나 리턴 private 으로 만들기)

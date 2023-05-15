@@ -5,19 +5,6 @@ import models.Gameplayer;
 
 public class PrintSystem {
 
-//	public void printCard(Card card) {
-//		String cardSuit = card.getSuit();
-//		String suit;
-//		if (cardSuit.equals("Spades")) {//스페이드
-//			suit = "♠";
-//		} else if (cardSuit.equals("Hearts")) {//하트
-//			
-//		} else if (cardSuit.equals("Diamonds")) {//다이아
-//			
-//		} else {//클로버
-//			
-//		}
-//	}
 	public void printProgress(Gameplayer player) {
 		// 진행상황 출력
 		System.out.print(player.getName() + "이(가) 뽑은 카드 ");

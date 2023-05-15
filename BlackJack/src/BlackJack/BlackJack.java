@@ -65,15 +65,15 @@ public class BlackJack {
 				System.out.println("승리!");
 			} else if (player.getPlayerScore() > dealer.getPlayerScore()) {
 				print.printTable(player, dealer);
-				System.out.println("플레이어 점수 : " + player.getPlayerScore() + "딜러 점수 : " + dealer.getPlayerScore());
+				System.out.println("플레이어 점수 : " + player.getPlayerScore() + "\t딜러 점수 : " + dealer.getPlayerScore());
 				System.out.println("승리!");
 			} else if (player.getPlayerScore() == dealer.getPlayerScore()) {
 				print.printTable(player, dealer);
-				System.out.println("플레이어 점수 : " + player.getPlayerScore() + "딜러 점수 : " + dealer.getPlayerScore());
+				System.out.println("플레이어 점수 : " + player.getPlayerScore() + "\t딜러 점수 : " + dealer.getPlayerScore());
 				System.out.println("무승부");
 			} else {
 				print.printTable(player, dealer);
-				System.out.println("플레이어 점수 : " + player.getPlayerScore() + "딜러 점수 : " + dealer.getPlayerScore());
+				System.out.println("플레이어 점수 : " + player.getPlayerScore() + "\t딜러 점수 : " + dealer.getPlayerScore());
 				System.out.println("패배!");
 			}
 
