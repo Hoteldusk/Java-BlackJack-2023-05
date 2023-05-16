@@ -30,7 +30,6 @@ public class Deck {
 	}
 
 	public void shuffle() {
-		// 셔플 알고리즘 구현해야함
 		Collections.shuffle(cards);
 	}
 
@@ -81,5 +80,8 @@ public class Deck {
 
 		return card;
 	}
-	// card suit method (if 4번 string 문자하나 리턴 private 으로 만들기)
+
+	public int getDeckSize() {
+		return cards.size();
+	}
 }
