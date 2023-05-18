@@ -3,6 +3,8 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.AnsiConsole;
+
 public class Player implements Gameplayer{
 	
 	private List<Card> cardList;
@@ -14,7 +16,7 @@ public class Player implements Gameplayer{
 		cardList = new ArrayList<>();
 //		cardCount = 0;
 		score = 0;
-		name = "당신";
+		name = AnsiConsole.YELLOW("플레이어");
 	}
 	
 	// 카드 드로

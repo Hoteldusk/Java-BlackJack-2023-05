@@ -3,6 +3,8 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.AnsiConsole;
+
 public class Dealer implements Gameplayer{
 	private List<Card> cardList;
 //	private int cardCount;
@@ -13,7 +15,7 @@ public class Dealer implements Gameplayer{
 		cardList = new ArrayList<>();
 //		cardCount = 0;
 		score = 0;
-		name = "딜러";
+		name = AnsiConsole.PURPLE("딜러");
 	}
 	
 	// 카드 드로
